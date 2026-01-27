@@ -17,7 +17,7 @@
 
 ## 🛠️ Installation
 
-1. Clone this repository.
+1. Clone this repository (or download the zip).
 2. Go to `chrome://extensions/` in your browser.
 3. Enable **Developer Mode**.
 4. Click **Load Unpacked** and select the DUST-Plus folder.
