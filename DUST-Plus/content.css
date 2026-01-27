@@ -1,0 +1,186 @@
+.dust-dropdown-container {
+    position: fixed;
+    z-index: 10000;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    width: 320px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.dark .dust-dropdown-container {
+    background: #1e293b;
+    border-color: #334155;
+    color: #f1f5f9;
+}
+
+.dust-dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 13px;
+}
+
+.dust-dropdown-item:hover {
+    background: #f1f5f9;
+}
+
+.dark .dust-dropdown-item:hover {
+    background: #334155;
+}
+
+.dust-item-text {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dust-edit-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    color: #94a3b8;
+    opacity: 0;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.dust-dropdown-item:hover .dust-edit-btn {
+    opacity: 1;
+}
+
+.dust-edit-btn:hover {
+    color: #3b82f6;
+    background: #e2e8f0;
+}
+
+.dark .dust-edit-btn:hover {
+    background: #475569;
+}
+
+.dust-edit-input {
+    background: #ffffff;
+    border: 1px solid #3b82f6;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 13px;
+    width: 220px;
+    color: #1e293b;
+    outline: none;
+}
+
+.dark .dust-edit-input {
+    background: #0f172a;
+    border-color: #3b82f6;
+    color: #f1f5f9;
+}
+
+.dust-dropdown-footer {
+    font-size: 10px;
+    color: #94a3b8;
+    text-align: center;
+    padding: 6px 0 2px 0;
+    border-top: 1px solid #f1f5f9;
+    margin-top: 4px;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.dark .dust-dropdown-footer {
+    border-top-color: #334155;
+    color: #64748b;
+}
+
+.dust-delete-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #94a3b8;
+    opacity: 0;
+    transition: opacity 0.2s, color 0.2s;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.dust-dropdown-item:hover .dust-delete-btn {
+    opacity: 1;
+}
+
+.dust-delete-btn:hover {
+    color: #ef4444;
+    background: #fee2e2;
+}
+
+.dark .dust-delete-btn:hover {
+    background: #7f1d1d;
+    color: #fecaca;
+}
+
+.dust-add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    margin: 4px 0;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+.dust-add-btn:hover {
+    background: #f8fafc;
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+
+.dark .dust-add-btn {
+    border-color: #475569;
+    color: #94a3b8;
+}
+
+.dark .dust-add-btn:hover {
+    background: #1e293b;
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+.dust-tooltip {
+    position: fixed;
+    z-index: 10001;
+    background: #000000;
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    pointer-events: none;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    animation: dustFadeIn 0.2s ease-out;
+}
+
+.dark .dust-tooltip {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+@keyframes dustFadeIn {
+    from { opacity: 0; transform: translate(-50%, 4px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
