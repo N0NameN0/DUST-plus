@@ -216,19 +216,23 @@ function toggleDropdown() {
         const rect = btn.getBoundingClientRect();
         const spaceAbove = rect.top;
         const spaceBelow = window.innerHeight - rect.bottom;
-        const dropdownHeight = 250;
+        // On estime qu'un menu "confortable" fait au moins 200px
+        const threshold = 200;
 
         dropdown.style.left = `${rect.left}px`;
 
-        if (spaceAbove > dropdownHeight || spaceAbove > spaceBelow) {
-            dropdown.style.bottom = `${window.innerHeight - rect.top + 8}px`;
-            dropdown.style.top = 'auto';
-        } else {
+        // Si on a assez de place en bas (> seuil) OU que le bas est plus grand que le haut
+        // On l'ouvre vers le bas. Sinon, on l'ouvre vers le haut.
+        if (spaceBelow >= threshold || spaceBelow > spaceAbove) {
             dropdown.style.top = `${rect.bottom + 8}px`;
             dropdown.style.bottom = 'auto';
+            dropdown.style.maxHeight = `${spaceBelow - 20}px`;
+        } else {
+            dropdown.style.bottom = `${window.innerHeight - rect.top + 8}px`;
+            dropdown.style.top = 'auto';
+            dropdown.style.maxHeight = `${spaceAbove - 20}px`;
         }
 
-        dropdown.style.maxHeight = `${Math.max(spaceAbove, spaceBelow) - 20}px`;
         dropdown.style.overflowY = 'auto';
 
         document.body.appendChild(dropdown);
