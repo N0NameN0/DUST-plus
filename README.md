@@ -1,6 +1,6 @@
 # 🚀 DUST-Plus
 
-**DUST-Plus** is a productivity-focused Chrome extension for the [Dust.tt](https://dust.tt) platform (including [eu.dust.tt](https://eu.dust.tt)). It helps power users manage their recurring prompts through a sleek, integrated interface.
+**DUST-Plus** is a productivity-focused Chrome extension for the [Dust.tt](https://dust.tt) platform. It helps power users manage their recurring prompts through a sleek, integrated interface.
 
 ## ✨ Features
 
